@@ -4,16 +4,12 @@
     {
         static void Main(string[] args)
         {
+            List<string> words = File.ReadAllLines("../../../hangman_words.txt").ToList();
             while (true)
             {
                 bool resume = true;
                 while (resume)
                 {
-                    List<string> words = new List<string>()
-                    {
-                        "apple", "banana", "computer", "school", "keyboard"
-                    };
-
                     Random rand = new Random();
                     string word = words[rand.Next(words.Count)];
 
@@ -23,7 +19,7 @@
                         guessed[i] = '_';
                     }
 
-                    int attempts = 6;
+                    int attempts = 15;
                     bool won = false;
 
                     Console.WriteLine("mogesalmebit HangMan shi (sityvebi inglisuria)!");
@@ -68,7 +64,7 @@
                     {
                         Console.WriteLine("\nshen waage! Sityva: " + word);
                     }
-                }
+                
 
                 bool choiceresume = true;
                 while (choiceresume)
@@ -85,12 +81,14 @@
                     else if (choice == "N")
                     {
                         Console.WriteLine("programa dasrulda.");
+                        Console.Clear();
                         return;
                     }
                     else
                     {
                         Console.WriteLine("shecdoma: daawire mxolod Y an N.");
                     }
+                }
                 }
             }
         }
