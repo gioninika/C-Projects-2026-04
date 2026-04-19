@@ -17,7 +17,6 @@
                 Console.WriteLine("sheiyvane meore ricxvi:");
                 num2 = Convert.ToDouble(Console.ReadLine());
 
-                // ოპერაციის ვალიდაცია
                 while (true)
                 {
                     Console.WriteLine("airchie operacia (+, -, *, /):");
@@ -64,7 +63,8 @@
                 while (choiceresume)
                 {
                     Console.WriteLine("ginda tavidan? (Y/N):");
-                    string choice = Console.ReadLine().ToUpper();
+                    string choice = Console.ReadKey().KeyChar.ToString().ToUpper();
+                    Console.WriteLine();
 
                     if (choice == "Y")
                     {
@@ -74,8 +74,6 @@
                     else if (choice == "N")
                     {
                         Console.WriteLine("programa dasrulda.");
-                        //resume = true;
-                        //choiceresume = false;
                         return;
                     }
                     else
