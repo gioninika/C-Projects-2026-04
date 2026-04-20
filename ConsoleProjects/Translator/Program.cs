@@ -19,9 +19,6 @@ namespace Translator
 
                 string choice = Console.ReadLine();
 
-                if (choice == "0")
-                    break;
-
                 string fileName = choice switch
                 {
                     "1" => "ka-en.txt",
