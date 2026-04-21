@@ -1,1 +1,7 @@
-<Solution />
+<Solution>
+  <Folder Name="/StudentSystem/">
+    <Project Path="StudentSystem.Data/StudentSystem.Data.csproj" Id="c78b97f0-07ff-493d-95c6-cd587c70d5dc" />
+    <Project Path="StudentSystem.Repository/StudentSystem.Repository.csproj" Id="281b0b48-fcbc-4129-9e5b-45dd6400ee42" />
+    <Project Path="StudentSystem.UI/StudentSystem.UI.csproj" Id="82e9f4af-127e-4fab-9352-fa96cf80842c" />
+  </Folder>
+</Solution>
