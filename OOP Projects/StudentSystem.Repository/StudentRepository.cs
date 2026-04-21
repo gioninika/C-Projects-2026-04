@@ -12,15 +12,17 @@ namespace StudentSystem.Repository
     {
         private const string _filePath = @"../../../../StudentSystem.Data/Students.json";
         private readonly List<Student> _students;
-        private StudentRepository()
+        public StudentRepository()
         {
             _students = LoadDataAsync(_filePath).ToListAsync().Result;
         }
+        
 
         public async Task<int> AddStudentAsync(Student student)
         {
             student.RollNumber = _students.Any() ? _students.Max(a => a.RollNumber) + 1 : 1;
-
+            MyValidators.Validate(student);
+            student.Grade = char.ToUpper(student.Grade);
             _students.Add(student);
             await SaveDataAsync();
 
@@ -37,8 +39,8 @@ namespace StudentSystem.Repository
 
             if (index >= 0)
             {
-                _students[index].Grade = grade;
-                SaveDataAsync();
+                _students[index].Grade = char.ToUpper(grade);
+                await SaveDataAsync();
             }
 
             return _students[index];

@@ -14,7 +14,7 @@ namespace StudentSystem.Repository.Attributes
             {
                 throw new ArgumentNullException($"{propertyName} is required");
             }
-            if (!"ABCDF".Contains(value.ToString()))
+            if (!"abcdf".Contains(value.ToString().ToLower()))
             {
                 throw new Exception("შეფასება უნდა იყოს A, B, C, D ან F!");
             }
