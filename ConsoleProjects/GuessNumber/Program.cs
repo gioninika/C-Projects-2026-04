@@ -23,11 +23,11 @@
                     attempts++;
                     if (guess > number)
                     {
-                        Console.WriteLine("dabalia!"); // სწორი რიცხვი დაბალია
+                        Console.WriteLine("dabalia!");
                     }
                     else if (guess < number)
                     {
-                        Console.WriteLine("magalia!"); // სწორი რიცხვი მაღალია
+                        Console.WriteLine("magalia!");
                     }
                     else
                     {
